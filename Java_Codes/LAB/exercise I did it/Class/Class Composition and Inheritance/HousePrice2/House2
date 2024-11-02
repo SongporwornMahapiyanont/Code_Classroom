@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class HousePrice2 {
+    // Do not change the code below this line.
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        ArrayList<House> houses = new ArrayList<>(); 
+        for(int i=0;i<N;i++)
+        {
+            int landSize = scan.nextInt();
+            int quality = scan.nextInt();
+            int floors = scan.nextInt();
+            int houseArea = scan.nextInt();
+            House house = new House(landSize, quality, floors, houseArea);
+            houses.add(house);
+        }
+        int AcceptPrice = scan.nextInt();
+        int AccepthouseArea = scan.nextInt();
+        boolean check = false;
+        for(int i=0;i<houses.size();i++)
+        {
+            if(houses.get(i).price <= AcceptPrice && houses.get(i).houseArea >= AccepthouseArea)
+            {
+                check = true;
+                System.out.println(houses.get(i).landSize + " " + houses.get(i).quality + " " + houses.get(i).floors + " " + houses.get(i).houseArea + " " + houses.get(i).price);
+            }
+        }
+        if(!check)
+        {
+            System.out.println("none");
+        }
+        scan.close();
+    }
+}
+
+class House{
+    int landSize,quality,floors,houseArea;
+    public int price;
+    House(int landSize, int quality, int floors, int houseArea){
+        this.landSize = landSize;
+        this.quality = quality;
+        this.floors = floors;
+        this.houseArea = houseArea;
+        this.price = computerPrice(landSize, quality, floors, houseArea);
+    }
+    int computerPrice(int landSize,int quality,int floors,int houseArea)
+    {
+        int a = 10000*landSize;
+        int b=0,c=0;
+        if(floors>1)
+        {
+            b = (floors-1)*200000;
+        }
+        if(quality==1)
+        {
+            c = houseArea*10000;
+        }
+        else if(quality==2)
+        {
+            c = houseArea*8000;
+        }
+        else if(quality == 3)
+        {
+            c = houseArea*5000;
+        }
+        int sum = a+b+c;
+        return sum;
+    }
+}
+
+
