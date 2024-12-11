@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มตัวอย่าง</title>
+</head>
+<body>
+    <h1>แบบฟอร์มตัวอย่าง</h1>
+    <form action="/submit-form" method="post">
+        <!-- ชื่อ -->
+        <label for="name">ชื่อ:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- อีเมล -->
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- เบอร์โทรศัพท์ -->
+        <label for="phone">เบอร์โทรศัพท์:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <!-- เพศ -->
+        <label for="gender">เพศ:</label>
+        <select id="gender" name="gender">
+            <option value="male">ชาย</option>
+            <option value="female">หญิง</option>
+            <option value="other">อื่นๆ</option>
+        </select>
+        <br><br>
+
+        <!-- ข้อความ -->
+        <label for="message">ข้อความ:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <br><br>
+
+        <!-- ปุ่มส่ง -->
+        <button type="submit">ส่ง</button>
+    </form>
+
+    <script></script>
+</body>
+</html>
