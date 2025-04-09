@@ -1,0 +1,14 @@
+[
+  {
+    "movie": "Attack On Titan: The Last Attack",
+    "time": "12:45",
+    "seats": ["A1", "A2"],
+    "user": "user1"
+  },
+  {
+    "movie": "Batman 2022",
+    "time": "18:00",
+    "seats": ["B5", "B6", "B7"],
+    "user": "user2"
+  }
+]

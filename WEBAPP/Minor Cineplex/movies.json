@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Attack On Titan : The Last Attack",
+    "description": "In a world overrun by terrifying Titans, humanity's final hope rests with the Scouts. As the final battle looms, secrets are revealed, and survival becomes a race against time. The fate of humanity is in the hands of those daring enough to face their greatest fears.",
+    "image": "images/aot.jpg"
+  },
+  {
+    "title": "Captain America",
+    "description": "Steve Rogers, a frail young man, is transformed into Captain America after receiving an experimental serum. As World War II intensifies, he battles the Nazis and their Hydra faction, led by the sinister Red Skull, to prevent global destruction.",
+    "image": "images/ca.jpg"
+  },
+  {
+    "title": "Batman 2022",
+    "description": "In the gritty streets of Gotham, a new, brooding hero rises to confront the city's corruption. As Batman unravels a web of crime and conspiracy, he must grapple with his own dark past while seeking justice in a city on the brink of collapse.",
+    "image": "images/bat.jpg"
+  },
+  {
+    "title": "Avatar",
+    "description": "On the lush alien world of Pandora, a human soldier becomes part of the native Na'vi tribe and must choose between following his orders or protecting the world he has grown to love.",
+    "image": "images/61OUGpUfAyL._AC_SL1000_.jpg"
+  },
+  {
+    "title": "The Amazing Spiderman",
+    "description": "Peter Parker embraces his destiny as Spider-Man and faces a new enemy, the Lizard, while uncovering secrets about his father's mysterious past.",
+    "image": "images/65804ba0061fc038b8776685-the-amazing-spiderman-movie-poster.jpg"
+  },
+  {
+    "title": "Last Days",
+    "description": "Inspired by the final days of a music icon, this film explores isolation, fame, and the silent struggles of a soul in crisis, drifting through haunting moments of self-reflection.",
+    "image": "images/MV5BODk1OTUyZmYtNTQxYS00Y2FhLTliNmUtNTM2OTcwZjgzMzI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  }
+]

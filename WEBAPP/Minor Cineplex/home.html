@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minor Cineplex</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-container"></div>
+
+    <div class="container justify-content-center align-items-center min-vh-100">
+        <!-- Translate and Dropdown -->
+        <div id="dropdownContainer"></div>
+        <div class="container">
+            <!-- Carousel -->
+            <div id="carousel-fade" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow" id="carousel-inner">
+                    <!-- Movies will be loaded dynamically here -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-fade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon p-2" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-fade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon p-2" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <h1 class="text-center">Now Showing</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="movie-cards-container">
+                <!-- Movie cards will be inserted here -->
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/fetch.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/selectSeats.js"></script>
+    <script src="./js/translate.js"></script>
+    <script>// Fetch movie data from the JSON file and load it into the carousel
+        fetch('./movies.json')
+            .then(response => response.json())
+            .then(data => {
+                const carouselInner = document.getElementById('carousel-inner');
+
+                data.forEach((movie, index) => {
+                    // Determine if the current item should be the active one (first item)
+                    const isActive = index === 0 ? 'active' : '';
+
+                    // Create the carousel item HTML
+                    const carouselItem = `
+                <div class="carousel-item ${isActive}">
+                    <img src="${movie.image}" class="d-block w-100" alt="${movie.title}">
+                </div>
+              `;
+
+                    // Append the carousel item to the carousel-inner container
+                    carouselInner.innerHTML += carouselItem;
+                });
+            })
+            .catch(error => console.error('Error loading movie data:', error));
+    </script>
+    <script>
+        let allMovies = [];
+
+        function renderMovies(movies) {
+            const movieCardsContainer = document.getElementById("movie-cards-container");
+            let allCards = "";
+
+            movies.forEach((movie) => {
+                allCards += `
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../${movie.image}" class="card-img-top" alt="${movie.title}" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">${movie.title}</h5>
+                                <p class="card-text">${movie.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            movieCardsContainer.innerHTML = allCards;
+        }
+
+        // Load movies
+        fetch("../movies.json")
+            .then((response) => response.json())
+            .then((data) => {
+                allMovies = data;
+                renderMovies(allMovies);
+            })
+            .catch((error) => console.error("Error loading movie data:", error));
+
+        // Search functionality
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const keyword = this.value.toLowerCase();
+            const filtered = allMovies.filter((movie) =>
+                movie.title.toLowerCase().includes(keyword)
+            );
+            renderMovies(filtered);
+        });
+    </script>
+</body>
+
+</html>

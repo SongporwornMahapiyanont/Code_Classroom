@@ -1,0 +1,29 @@
+<div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+    <div class="btn-group w-100">
+        <button id="theaterBtn" class="btn btn-success btn-lg dropdown-toggle w-100" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Select Theater
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark w-100">
+            <li><a class="dropdown-item" onclick="selectTheater(this)">Lotus's Nakhonpatom</a></li>
+            <li><a class="dropdown-item" onclick="selectTheater(this)">Robinson Nakhonpatom</a></li>
+            <li><a class="dropdown-item" onclick="selectTheater(this)">Central's Nakhonpatom</a></li>
+        </ul>
+    </div>
+
+    <!-- Movie Dropdown -->
+    <div class="btn-group w-100">
+        <button id="movieBtn" class="btn btn-success btn-lg dropdown-toggle w-100" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Select Movie
+        </button>
+        <ul id="movieDropdown" class="dropdown-menu dropdown-menu-dark w-100">
+            <!-- Will be populated via JS -->
+        </ul>
+    </div>
+
+
+    <div class="d-grid w-100">
+        <button type="button" class="btn btn-primary btn-lg w-100" onclick="selectShowTime()">Show Time</button>
+    </div>
+</div>
