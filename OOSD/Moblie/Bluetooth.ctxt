@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Bluetooth
+comment1.params=
+comment1.target=void\ doWork()
+comment2.params=
+comment2.target=void\ connectBluetooth()
+comment3.params=playmusic
+comment3.target=void\ playMusic(boolean)
+comment4.params=bluetooth
+comment4.target=void\ setBluetooth(boolean)
+comment5.params=
+comment5.target=boolean\ getBlueTooth()
+comment6.params=
+comment6.target=void\ connect()
+comment7.params=
+comment7.target=boolean\ getConnect()
+numComments=8

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ doWork()
+comment1.params=power
+comment1.target=void\ setPower(boolean)
+comment2.params=
+comment2.target=boolean\ getPower()
+numComments=3

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Bus
+comment1.params=fuelQuantity\ fuelConsumption
+comment1.target=Bus(double,\ double)
+numComments=2

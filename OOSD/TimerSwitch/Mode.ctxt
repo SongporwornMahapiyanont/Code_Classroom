@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Mode
+comment1.params=
+comment1.target=Mode()
+comment2.params=
+comment2.target=int\ getMode()
+comment3.params=
+comment3.target=java.util.ArrayList\ getModeString()
+comment4.params=
+comment4.target=void\ setMode()
+comment5.params=
+comment5.target=void\ setDate()
+comment6.params=
+comment6.target=java.util.ArrayList\ getDate()
+comment7.params=
+comment7.target=void\ println()
+numComments=8

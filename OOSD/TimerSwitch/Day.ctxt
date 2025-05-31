@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Day
+comment1.params=
+comment1.target=Day()
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=java.time.DayOfWeek\ getDay()
+numComments=4

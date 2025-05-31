@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Vehicles
+comment1.params=fuelQuantity
+comment1.target=void\ setFuelQuantity(double)
+comment2.params=currentFuel
+comment2.target=void\ setCurrentFuel(double)
+comment3.params=fuelConsumption
+comment3.target=void\ setFuelConsumption(double)
+comment4.params=
+comment4.target=double\ getFuelQuantity()
+comment5.params=
+comment5.target=double\ getCurrentFuel()
+comment6.params=
+comment6.target=double\ getFuelConsumption()
+comment7.params=distance
+comment7.target=boolean\ CalculateDistance(double)
+numComments=8

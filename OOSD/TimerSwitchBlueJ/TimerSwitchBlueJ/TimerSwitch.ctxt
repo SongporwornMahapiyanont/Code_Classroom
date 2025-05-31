@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=clock
+comment0.target=TimerSwitch(TSClock)
+comment1.params=when
+comment1.target=void\ addOnProgram(java.lang.String)
+comment2.params=when
+comment2.target=void\ addOffProgram(java.lang.String)
+comment3.params=
+comment3.target=void\ redButton()
+comment4.params=
+comment4.target=void\ powerOn()
+comment5.params=
+comment5.target=void\ powerOff()
+comment6.params=load
+comment6.target=void\ connectTo(Load)
+comment7.params=
+comment7.target=void\ process()
+numComments=8
